@@ -296,15 +296,6 @@ progress.oninput = (e) => {
     audio.currentTime = seekTime;
 }
 
-// set the margin top of playlist as the height of dashboard plus the margin bottom of song by js
-const dashboard = $('.dashboard');
-const dashboardHeight = dashboard.offsetHeight;
-// get the margin bottom of song
-const song = $('.song');
-const songMarginBottom = window.getComputedStyle(song).marginBottom;
-const playlist = $('.playlist');
-// set the margin top of playlist as the height of dashboard plus songMarginBottom
-playlist.style.marginTop = dashboardHeight + parseInt(songMarginBottom) + 'px';
 
 
 
