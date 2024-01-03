@@ -27,7 +27,6 @@ html {
 .dashboard {
     background-color: #fff;
     border-radius: 5px;
-    margin-bottom: 24px;
     width: var(--standard-width);
     position: fixed;
     top: 0;
