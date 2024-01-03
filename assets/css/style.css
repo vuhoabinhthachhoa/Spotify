@@ -1,0 +1,183 @@
+:root {
+    --primary-color: #ec1f55;
+    --text-color: #333;
+    --standard-width: 480px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b9b5b55c;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+.player {
+    position: relative;
+    max-width: var(--standard-width);
+    margin: 0 auto;
+}
+
+.dashboard {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    width: var(--standard-width);
+    position: fixed;
+    top: 0;
+}
+
+header {
+    text-align: center;
+}
+
+header h4 {
+    color: var(--primary-color);
+    padding-top: 16px;
+}
+
+header h2 {
+    font-size: 20px;
+}
+
+.cd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cd-thumb {
+    width: 50%;
+    padding-top:50%;
+    border-radius: 50%;
+    background-color: #333;
+    background-size: cover;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.control {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.btn {
+    width: 20%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas:hover {
+    cursor: pointer;
+    opacity: 0.7; /* This reduces the opacity when the mouse hovers over the element */
+    transition: opacity 0.3s ease-in-out; /* This makes the opacity animate smoothly */
+}
+
+.active-song {
+    background-color: var(--primary-color)!important;
+    color: #fff!important;
+}
+
+.active-btn {
+    color: var(--primary-color)!important;
+}
+
+.fa-redo,
+.fa-random,
+.fa-step-backward,
+.fa-step-forward {
+    color: #4f4f4f;
+}
+
+.btn-toggle-play .contain {
+    width: 60%;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin: auto;
+    padding: 8%;
+    font-size: 28px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn i {
+    
+}
+
+.progress {
+    display: flex;
+    justify-content: center;
+}
+
+.progress input {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.progress input:hover {
+    cursor: pointer;
+}
+
+.playlist {
+    margin-top: 490px;
+}
+
+.song {
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    padding: 12px 24px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+}
+
+.song:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.song:active {
+    opacity: 0.8;
+}
+
+.song-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    
+    background-size: cover; 
+}
+
+.song-info {
+    width: 84%;
+    padding-left: 24px;
+}
+
+.song-name {
+    font-size: 20px;
+}
+
+.song-author {
+    font-size: 14px;
+    color: #999;
+}
+
+.song-options {
+    font-size: 34px;
+    color: #999;
+}
+
