@@ -1,7 +1,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-// -----Render Song.-------
+// -----Render Song.-----
 songs = [
     {
         name: 'Khơi lòng',
