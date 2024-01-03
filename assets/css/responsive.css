@@ -1,0 +1,28 @@
+/* We should use em unit for media queries because px unit
+   can be error in some browser.
+*/
+
+/* PC */
+@media (min-width: 64em) {}
+
+/* Tablet and Mobile */
+
+@media (max-width: 63.9375em) {}
+
+/* Tablet */
+@media (min-width: 46.3125em) and (max-width: 63.9375em) {}
+
+/* Mobile */
+@media (max-width: 46.25em) {
+    .dashboard {
+        width: 100%;
+    }
+
+    .btn-toggle-play .contain {
+        padding: 4%;
+    }
+
+    .playlist {
+        margin-top: 480px;
+    }
+}
