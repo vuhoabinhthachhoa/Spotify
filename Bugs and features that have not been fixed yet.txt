@@ -1,0 +1,2 @@
+chưa có nút tăng giảm âm lượng
+màn hình không tự động di duyển đến bài hát đang chạy.
