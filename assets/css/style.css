@@ -104,9 +104,11 @@ header h2 {
     background-color: var(--primary-color);
     border-radius: 50%;
     margin: auto;
-    padding: 8%;
     font-size: 28px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidden {
@@ -169,7 +171,8 @@ header h2 {
 }
 
 .song-name {
-    font-size: 20px;
+    font-size: 17px; /*decrease the size of song name from 20px to 17px because for 20px,
+    the text wil exceed the song button*/
 }
 
 .song-author {

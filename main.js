@@ -116,7 +116,6 @@ const cd = $('.cd-thumb');
 const cdWidth = cd.offsetWidth;
 const header = $('.dashboard header');
 var songEles;
-console.log(songEles);
 
 // ----Scroll top.-----
 const handleScrollTop = () => {
@@ -296,6 +295,15 @@ progress.oninput = (e) => {
     audio.currentTime = seekTime;
 }
 
+// we need to put (1) before (2) because the height of dashboard will changed after (1) is executed
+
+// (1)
+// set the height of .contain is always equal to its width 
+const contain = $('.contain');
+const containWidth = contain.offsetWidth;
+contain.style.height = containWidth + 'px';
+
+// (2)
 // set the margin top of playlist as the height of dashboard plus the margin bottom of song by js
 const dashboard = $('.dashboard');
 const dashboardHeight = dashboard.offsetHeight;
@@ -305,6 +313,10 @@ const songMarginBottom = window.getComputedStyle(song).marginBottom;
 const playlist = $('.playlist');
 // set the margin top of playlist as the height of dashboard plus songMarginBottom
 playlist.style.marginTop = dashboardHeight + 12 + 'px';
+
+
+
+
 
 
 
