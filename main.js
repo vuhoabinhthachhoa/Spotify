@@ -143,7 +143,7 @@ const cdThumbAnimate = cd.animate([
     // keyframes
     { transform: 'rotate(0deg)' },
     { transform: 'rotate(360deg)' }
-], { 
+], {
     // timing options
     duration: 20000, // The duration property specifies the number of milliseconds each iteration of the animation takes to complete.
     iterations: Infinity
@@ -284,14 +284,14 @@ forwardBtn.onclick = () => {
 const progress = $('#progress');
 
 audio.ontimeupdate = () => {
-    if(audio.duration) {
+    if (audio.duration) {
         const progressPercent = Math.floor(audio.currentTime / audio.duration * 100);
         progress.value = progressPercent;
     }
 }
 
 progress.oninput = (e) => {
-    const seekTime = e.target.value/100 * audio.duration;
+    const seekTime = e.target.value / 100 * audio.duration;
     audio.currentTime = seekTime;
 }
 
@@ -304,15 +304,21 @@ const containWidth = contain.offsetWidth;
 contain.style.height = containWidth + 'px';
 
 // (2)
+
+// why window.onload is needed:
+// if without window.onload: when the first time I load the page, the margin top of playlist is different with the times after that
+// Solution:The issue you're experiencing might be due to the timing of when your JavaScript code is executed. If your code runs before the page has fully loaded, it might not be able to accurately get the dimensions of the elements.
+// Here's a possible solution: You can wrap your code inside a window.onload event handler. This event fires after the entire page has loaded, including all dependent resources such as stylesheets and images.
+
 // set the margin top of playlist as the height of dashboard plus the margin bottom of song by js
-const dashboard = $('.dashboard');
-const dashboardHeight = dashboard.offsetHeight;
-// get the margin bottom of song
-const song = $('.song');
-const songMarginBottom = window.getComputedStyle(song).marginBottom;
-const playlist = $('.playlist');
-// set the margin top of playlist as the height of dashboard plus songMarginBottom
-playlist.style.marginTop = dashboardHeight + 12 + 'px';
+window.onload = function () {
+    const dashboard = $('.dashboard');
+    const dashboardHeight = dashboard.offsetHeight;
+    const playlist = $('.playlist');
+    // set the margin top of playlist as the height of dashboard plus songMarginBottom
+    playlist.style.marginTop = dashboardHeight + 12 + 'px';
+}
+
 
 
 
